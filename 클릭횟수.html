@@ -21,7 +21,7 @@
         h1.textContent = `클릭 횟수: ${counter++}`
     }
 
-    connectButton.addEventListener('click',(event)=>{
+    connectButton.addEventListener('click',()=>{
         if(isConnect === false) {
         h1.addEventListener('click',listener)
         p.textContent = '이벤트 연결 상태: 연결'
@@ -29,7 +29,7 @@
         }
     })
 
-    disconnectButton.addEventListener('click',(event)=>{
+    disconnectButton.addEventListener('click',()=>{
         if(isConnect === true) {
         h1.removeEventListener('click',listener)
         p.textContent = '이벤트 연결 상태: 해제'
@@ -46,4 +46,9 @@
     <p>이벤트연결상태: 해제</p>
     <hr>
 </body>
+<style>
+    h1{
+        user-select:none;
+    }
+</style>
 </html>
